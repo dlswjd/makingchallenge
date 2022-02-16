@@ -1,0 +1,29 @@
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+}
+
+#img{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.share{
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.kakao_ad{
+    margin-top: 600px;
+}
