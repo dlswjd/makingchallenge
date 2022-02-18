@@ -14,10 +14,10 @@ def home():
 
 # API 역할을 하는 부분
 @app.route('/api/list', methods=['GET'])
-def show_stars():
-    sample_receive = request.args.get('sample_give')
-    print(sample_receive)
-    return jsonify({'msg': 'list 연결되었습니다!'})
+def show_questions():
+    Questions = list(db.question.find({}, {'_id': False}))
+    print(Questions)
+    return jsonify({'Question': ''})
 
 @app.route('/api/like', methods=['POST'])
 def like_star():

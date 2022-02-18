@@ -10,3 +10,4 @@ food = [
 
 ]
 db.foods.insert_many(food)
+

@@ -1,120 +1,71 @@
-<!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>오늘은 무엇을 먹을까요?</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"/>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <style>
-            .center {
-                text-align: center;
-            }
+<!doctype html>
+<html lang="en">
 
-            .star-list {
-                width: 500px;
-                margin: 20px auto 0 auto;
-            }
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            .star-name {
-                display: inline-block;
-            }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-            .star-name:hover {
-                text-decoration: underline;
-            }
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
-            .card {
-                margin-bottom: 15px;
-            }
-        </style>
-        <script>
-            $(document).ready(function () {
-                showStar();
-            });
+    <title>메이킹챌린지 | 오늘 뭐먹지?</title>
 
-            function showStar() {
-                $.ajax({
-                    type: 'GET',
-                    url: '/api/list',
-                    data: {},
-                    success: function (response) {
-                        alert(response['msg']);
-                    }
-                });
-            }
+    <style>
 
-            function likeStar(name) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/api/like',
-                    data: {sample_give:'샘플데이터'},
-                    success: function (response) {
-                        alert(response['msg']);
-                    }
-                });
-            }
+<!--        .wrap{-->
+<!--                width: 900px;-->
+<!--                margin: auto;-->
+<!--        }-->
+<!--        -->
 
-            function deleteStar(name) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/api/delete',
-                    data: {sample_give:'샘플데이터'},
-                    success: function (response) {
-                        alert(response['msg']);
-                    }
-                });
-            }
 
-        </script>
-    </head>
-    <body>
-        <section class="hero is-warning">
-            <div class="hero-body">
-                <div class="container center">
-                    <h1 class="title">
-                        오늘은 무엇을 먹으면 좋겠나?
-                    </h1>
-                    <h2 class="subtitle">
-                        테스트를 해봅시다
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <div class="star-list" id="star-box">
-            <div class="card">
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-left">
-                            <figure class="image is-48x48">
-                                <img
-                                        src="https://happypot2u.com/image/happypot2u/image/data/korean%20cuisine.png"
-                                        alt="Placeholder image"
-                                />
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <a href="#" target="_blank" class="star-name title is-4">김치찌개 (좋아요: 3)</a>
-                            <p class="subtitle is-6">정말 맛있쥬?</p>
-                        </div>
-                    </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="#" onclick="likeStar('김다미')" class="card-footer-item has-text-info">
-                        좋아요!
-                        <span class="icon">
-              <i class="fas fa-thumbs-up"></i>
-            </span>
-                    </a>
-                    <a href="#" onclick="deleteStar('김다미')" class="card-footer-item has-text-danger">
-                        지워버려
-                        <span class="icon">
-              <i class="fas fa-ban"></i>
-            </span>
-                    </a>
-                </footer>
-            </div>
-        </div>
-    </body>
+
+    </style>
+    <script>
+        $(document).ready(function(){
+
+        });
+
+        function start() {
+            let status = $('#post-box').css('display');
+                if (status == 'block'){
+                    $('#post-box').hide();
+                    $('#btn-start').text('테스트 시작');
+                } else {
+                    $('#post-box').show();
+                    $('#btn-start').hide();
+                }
+        }
+
+
+    </script>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="jumbotron">
+        <h1 class="display-4">오늘 뭐 먹을까?</h1>
+        <p class="lead">간단한 선택으로 오늘의 메뉴를 정해보자!</p>
+        <hr class="my-4">
+        <!--            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+        <p class="lead">
+            <a onclick="start()" id="btn-start" class="btn btn-primary btn-lg" href="#" role="button">테스트시작</a>
+        </p>
+    </div>
+</div>
+
+</body>
+
 </html>
