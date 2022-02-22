@@ -1,0 +1,155 @@
+body {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    display: none;
+}
+
+.main-image{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 14px;
+    color: #7c7c7c;
+}
+.sub-title {
+    font-size: 24px;
+    font-weight: 100;
+    color: #ebebeb;
+}
+
+.start-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-start {
+    font-size: 20px;
+    color:#ffb340;
+    background-color: #1f1f1f;
+    border:#1f1f1f;
+}
+
+.btn-start, .btn-start:visited, .btn-start:hover, .btn-start:active {
+    font-size: 16px;
+    color:#ff9300;
+    background-color: #1f1f1f;
+    border:#1f1f1f;
+}
+
+.btn-start:active, .btn-start:focus {
+    background-color: #ff9300 !important;
+    border:#1f1f1f !important;
+    font-size: 16px;
+    color:#ffffff;
+}
+
+
+
+.btn-answer, .btn-answer:visited, .btn-answer:hover, .btn-answer:active, .btn-answer:focus {
+    background-color: #1f1f1f;
+    border:#1f1f1f;
+    width: 460px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+}
+.btn-answer:hover {
+    background-color: #ff9300 !important;
+    border:#1f1f1f !important;
+    width: 460px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.question-content {
+    font-size: 14px;
+    color: #ff9300;
+}
+
+.progress-bar {
+    background-color: #ff9300;
+}
+.progress {
+    background-color: #525764;
+}
+
+.rectangle {
+    width: 460px;
+    height: 8px;
+    background-color: #383a43;
+    margin: 0 auto;
+}
+.mid-rectangle {
+    width: 460px;
+    height: 1px;
+    background-color: #383a43;
+    margin: 0 auto;
+}
+
+
+
+
+
+.result-message {
+    color: #ff9300;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 100;
+}
+.result-food {
+    font-size: 18px;
+    font-weight: 100;
+    color: #ebebeb;
+}
+.result-explain {
+    font-size: 13px;
+    font-weight: normal;
+    color: #ff9300;
+}
+.share-message {
+    margin: 0 auto;
+    color:#ffffff;
+    font-size: 24px;
+    font-weight: 100;
+}
+.result {
+    display: none;
+}
+
+#img{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.share{
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.kakao_ad{
+    width:460px;
+    margin: 0 auto;
+}
+
